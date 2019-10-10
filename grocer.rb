@@ -14,24 +14,9 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-return cart if coupons == []
-new_cart = cart
 coupons.each do |coupon|
-    name = coupon[:item] 
-    num_of_c = coupon[:num]
-   if cart.include?(name) && cart[name][:count] >= num_of_c
-       new_cart[name][:count] -= num_of_c
-       if new_cart["#{name} W/COUPON"]
-         new_cart["#{name} W/COUPON"][:count] +=1
-         else
-         new_cart["#{name} W/COUPON"] = {
-           :price => coupon[:cost],
-           :clearance => new_cart[name][:clearance],
-           :count => 1
-         }
-       end
-     end
-   end
+    
+ 
    new_cart
 end
 
