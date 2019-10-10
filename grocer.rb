@@ -27,10 +27,10 @@ def apply_coupons(cart, coupons)
     if cart.include?(name) && cart[name][:count] >= num_of_c
        #remove number of the new_cart's count
        new_cart[name][:count] -= num_of_c
-       #increase the count when there is more items than the coupon allows
+      
        if new_cart["#{name} W/COUPON"]
-         new_cart["#{name} W/COUPON"][:count] >=0
-       #set the name with coupon with new value
+         new_cart["#{name} W/COUPON"][:count] +=1
+      
        else
          new_cart["#{name} W/COUPON"] = {
            :price => coupon[:cost],
