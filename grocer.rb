@@ -35,16 +35,6 @@ return cart if coupons == []
 end
 
 
-#result:
-{
-  "AVOCADO" => {:price => 3.0, :clearance => true, :count => 1},
-  "KALE"    => {:price => 3.0, :clearance => false, :count => 1},
-  "AVOCADO W/COUPON" => {:price => 5.0, :clearance => true, :count => 1},
-}
-
-# apply clearance:
-# takes 20% off price if the item is on clearance
-# does not discount the price for items not on clearance
 
 def apply_clearance(cart)
   new_cart = cart
