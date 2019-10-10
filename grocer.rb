@@ -13,10 +13,10 @@ def consolidate_cart(cart)
   updated_cart
 end
 
-def apply_coupons(cart, coupons)
-   return cart if coupons == []
-   new_cart = cart
-   coupons.each do |coupon|
+#def apply_coupons(cart, coupons)
+  # return cart if coupons == []
+   #  new_cart = cart
+   #coupons.each do |coupon|
     name = coupon[:item] 
     num_of_c = coupon[:num]
     if cart.include?(name) && cart[name][:count] >= num_of_c
