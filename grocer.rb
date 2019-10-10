@@ -15,13 +15,15 @@ end
 
 def apply_coupons(cart, coupons)
 coupons.each do |coupon|
+  item=coupon[:item]
+  if cart[item]
+    if cart[item][:count]>=coupon[:num] && cart ["#{item} W/COUPON"]
+       cart
     
  
-   new_cart
+   
+
 end
-
-
-
 def apply_clearance(cart)
   new_cart = cart
   cart.each do |name, hash|
