@@ -63,7 +63,7 @@ def checkout(cart: [], coupons: [])	def checkout(cart: [], coupons: [])
 
   total
 end 
-end 
+
 
 
 
