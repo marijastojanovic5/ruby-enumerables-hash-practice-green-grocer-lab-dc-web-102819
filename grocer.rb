@@ -30,9 +30,6 @@ end
 cart
 end
  
-   
-
-
 def apply_clearance(cart)
   new_cart = cart
   cart.each do |name, hash|
