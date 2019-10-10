@@ -35,6 +35,7 @@ def apply_coupons(cart, coupons)
     end
     new_hash
 end
+
 def apply_clearance(cart:[])
   # code here	  new_hash = {}
   cart.each do |item, properties|
@@ -46,10 +47,11 @@ def apply_clearance(cart:[])
     end
   end
   new_hash
-end	end
+end	
+end
 
 
-def checkout(cart: [], coupons: [])	def checkout(cart: [], coupons: [])
+	def checkout(cart: [], coupons: [])
   # code here	  cart = consolidate_cart(cart:cart)
   cart = apply_coupons(cart:cart, coupons:coupons)
   cart = apply_clearance(cart:cart)
@@ -63,6 +65,7 @@ def checkout(cart: [], coupons: [])	def checkout(cart: [], coupons: [])
 
   total
 end 
+end
 
 
 
