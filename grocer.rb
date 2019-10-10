@@ -62,14 +62,9 @@ def checkout(cart: [], coupons: [])	def checkout(cart: [], coupons: [])
   total > 100 ? total -= total * 0.1 : nil
 
   total
-end 	end 
+end 
+end 
 
 
 
-def apply_clearance(cart)
-  # code here
-end
 
-def checkout(cart, coupons)
-  # code here
-end
