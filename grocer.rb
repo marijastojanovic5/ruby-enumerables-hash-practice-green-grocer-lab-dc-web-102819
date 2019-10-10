@@ -35,6 +35,36 @@ def apply_coupons(cart, coupons)
     end
     new_hash
 end
+def apply_clearance(cart:[])
+  # code here	  new_hash = {}
+  cart.each do |item, properties|
+    if properties[:clearance] == true
+      price = properties[:price] - properties[:price] * 0.20
+      new_hash[item] = {:price => price, :clearance => properties[:clearance], :count => properties[:count]}
+    else
+      new_hash[item] = properties
+    end
+  end
+  new_hash
+end	end
+
+
+def checkout(cart: [], coupons: [])	def checkout(cart: [], coupons: [])
+  # code here	  cart = consolidate_cart(cart:cart)
+  cart = apply_coupons(cart:cart, coupons:coupons)
+  cart = apply_clearance(cart:cart)
+
+  total = 0
+  cart.each do |item, properties|
+    total += properties[:price] * properties[:count]
+  end
+
+  total > 100 ? total -= total * 0.1 : nil
+
+  total
+end 	end 
+
+
 
 def apply_clearance(cart)
   # code here
