@@ -36,17 +36,4 @@ def apply_coupons(cart, coupons)
     new_hash
 end
 
-def apply_clearance(cart:[])
-  new_hash = {}
-  cart.each do |item, properties|
-    if properties[:clearance] == true
-      price = properties[:price] - properties[:price] * 0.20
-      new_hash[item] = {:price => price, :clearance => properties[:clearance], :count => properties[:count]}
-    else
-      new_hash[item] = properties
-    end
-  end
-  new_hash
-end	
-end
 
