@@ -14,7 +14,7 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart:[], coupons:[])
-  # code here	    new_hash = {}
+  	    new_hash = {}
     cart.each do |vegetable, properties|
       if !new_hash[vegetable]
         new_hash[vegetable] = properties
@@ -34,7 +34,8 @@ def apply_coupons(cart:[], coupons:[])
       end
     end
     new_hash
-end	end
+end	
+end
 
 #result:
 {
