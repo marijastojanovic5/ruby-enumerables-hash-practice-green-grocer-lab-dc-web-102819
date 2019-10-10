@@ -27,7 +27,8 @@ coupons.each do |coupon|
   end
 end
 end
-cart
+end
+  cart
 end
 
 
