@@ -21,7 +21,7 @@ return cart if coupons == []
   if cart.include?(name) && cart[name][:count] >= num_of_c
        new_cart[name][:count] -= num_of_c
       if new_cart["#{name} W/COUPON"]
-         new_cart["#{name} W/COUPON"][:count] += 1
+         new_cart["#{name} W/COUPON"][:count] >= 0
      else
          new_cart["#{name} W/COUPON"] = {
            :price => coupon[:cost],
