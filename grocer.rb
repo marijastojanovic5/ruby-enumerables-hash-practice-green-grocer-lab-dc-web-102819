@@ -25,7 +25,7 @@ coupons.each do |coupon|
        cart["#{item} W/COUPON"][:count]+=coupon[:num]
     cart[item][:count] -=coupon[:num]
   end
-end
+
 end
 cart
 end
@@ -40,13 +40,10 @@ def apply_clearance(cart)
         new_cart[name][:price] = (cart[name][:price] * 0.8).round(2)
       end
   end
-  new_cart #if not, just return the same cart
+  new_cart 
 end
 
-# checkout:
-# Apply coupon discounts if the proper number of items are present.# calls on #apply_clearance after calling on #apply_coupons when there is only one item in the cart and no coupon
-# Apply 20% discount if items are on clearance.
-# If, after applying the coupon discounts and the clearance discounts, the cart's total is over $100, then apply a 10% discount.
+
 
 
 def checkout(cart, coupons)
